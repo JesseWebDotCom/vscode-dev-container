@@ -74,8 +74,7 @@
         "source=cached-extensions,target=/home/vscode/.vscode-server/extensions,type=volume"
     ],
     "remoteEnv": {
-        "PATH": "${containerEnv:PATH}:/home/vscode/bin",
-        "PYTHONPATH": "src:.examples/python"
+        "PATH": "${containerEnv:PATH}:/home/vscode/bin"
     },
     // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": "pip3 install -r requirements.txt -c constraints.txt"
