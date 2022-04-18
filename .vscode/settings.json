@@ -34,13 +34,15 @@
     "powershell.codeFormatting.useCorrectCasing": true,
     // terminal
     "terminal.integrated.defaultProfile.osx": "bash",
-    // you have to install these fonts locally on your mac: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
-    "terminal.integrated.fontFamily": "MesloLGM NF",
+    // NOTE: run .devcontainer/host_install.sh on your mac to install the fonts
+    "terminal.integrated.fontFamily": "MesloLGM NF, Fira Code, Fira Code Retina, Fira Code Light, Monaco, 'Courier New', monospace",
     // editor
     "editor.codeActionsOnSave": {
         "source.organizeImports": true,
         "source.fixAll.markdownlint": true
     },
+    // NOTE: run .devcontainer/host_install.sh on your mac to install the fonts
+    "editor.fontFamily": "Fira Code, Fira Code Retina, Fira Code Light, Monaco, 'Courier New', monospace",
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "prettier.tabWidth": 4,
