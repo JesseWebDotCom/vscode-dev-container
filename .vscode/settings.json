@@ -1,0 +1,100 @@
+{
+    // code runner
+    "code-runner.defaultLanguage": "shellscript",
+    "code-runner.executorMap": {
+        "powershell": "/usr/bin/pwsh",
+        "python": "/usr/bin/python3"
+    },
+    "code-runner.runInTerminal": false,
+    "code-runner.clearPreviousOutput": true,
+    // powershell
+    "powershell.buttons.showRunButtons": false,
+    "[powershell]": {
+        "editor.defaultFormatter": "ms-vscode.powershell",
+        "editor.tabCompletion": "on",
+        "editor.autoIndent": "full",
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true
+    },
+    "powershell.codeFormatting.preset": "Allman",
+    "powershell.codeFormatting.autoCorrectAliases": true,
+    "powershell.codeFormatting.whitespaceBetweenParameters": true,
+    "powershell.scriptAnalysis.enable": true,
+    "powershell.integratedConsole.focusConsoleOnExecute": false,
+    "powershell.codeFormatting.newLineAfterOpenBrace": false,
+    "powershell.codeFormatting.whitespaceBeforeOpenParen": true,
+    "powershell.codeFormatting.ignoreOneLineBlock": false,
+    "powershell.codeFormatting.newLineAfterCloseBrace": true,
+    "powershell.codeFormatting.alignPropertyValuePairs": true,
+    "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+    "powershell.codeFormatting.useConstantStrings": true,
+    "powershell.codeFormatting.whitespaceAfterSeparator": true,
+    "powershell.codeFormatting.whitespaceAroundOperator": true,
+    "powershell.codeFormatting.openBraceOnSameLine": true,
+    "powershell.codeFormatting.useCorrectCasing": true,
+    // terminal
+    "terminal.integrated.defaultProfile.osx": "bash",
+    // you have to install these fonts locally on your mac: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+    "terminal.integrated.fontFamily": "MesloLGM NF",
+    // editor
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+        "source.fixAll.markdownlint": true
+    },
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "prettier.tabWidth": 4,
+    "editor.detectIndentation": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "files.autoSave": "afterDelay",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "[python]": {
+        "editor.formatOnSaveMode": "file",
+        "editor.formatOnPaste": false, // required for black
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.rulers": [88, 120]
+    },
+    // testing
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    // enables pylance (not python) to find modules
+    "python.analysis.extraPaths": ["src/proj", "src/lib/python"],
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.pytestPath": "/usr/local/bin/pytest",
+    // formatting
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length", "120"],
+    // linting
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.banditEnabled": true,
+    "python.linting.banditPath": "/usr/local/bin/bandit",
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "/usr/local/bin/mypy",
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.analysis.typeCheckingMode": "basic",
+    // visual
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Atom One Dark",
+    // spelling
+    "cSpell.diagnosticLevel": "Hint",
+    // todos
+    "todo-tree.highlights.enabled": false,
+    "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+    "todo-tree.general.statusBar": "current file",
+    "todo-tree.general.statusBarClickBehaviour": "reveal",
+    // indent-rainbow
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 2,
+    // workspace
+    "workbench.colorCustomizations": {
+        // will change the color of three dots to red
+        "editorHint.foreground": "#ff0000"
+    }
+}

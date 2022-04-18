@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File (Integrated Terminal)",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Current File (External Terminal)",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Python: Current File (Debug Console)",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${cwd}"
+            }
+        },
+        {
+            "type": "PowerShell",
+            "request": "launch",
+            "name": "PowerShell: Current File",
+            "script": "${file}",
+            "args": [],
+            "cwd": "${file}"
+        }
+    ]
+}

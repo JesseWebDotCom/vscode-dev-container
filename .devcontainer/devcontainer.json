@@ -1,0 +1,87 @@
+{
+    "name": "",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    // Set *default* container specific settings.json values on container create.
+    "settings": {
+        "terminal.integrated.cursorBlinking": true,
+        "powershell.codeFormatting.autoCorrectAliases": true,
+        "powershell.integratedConsole.showOnStartup": false,
+        "powershell.integratedConsole.suppressStartupBanner": true,
+        "powershell.startAsLoginShell.linux": false,
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.env.linux": {
+            "PYTHONPATH": "src/proj:src/lib/python" // enables python (not pylance) to find modules
+        },
+        "terminal.integrated.profiles.linux": {
+            "JavaScript Debug Terminal": null, // remove this terminal if present
+            "bash": {
+                "path": "bash",
+                "args": [
+                    "-l"
+                ],
+                "icon": "terminal-bash"
+            },
+            "zsh": {
+                "path": "zsh",
+                "args": [
+                    "-l"
+                ]
+            },
+            "pwsh": {
+                "path": "pwsh",
+                "icon": "terminal-powershell",
+                "args": [
+                    "-NoLogo"
+                ]
+            }
+        },
+    },
+    "remoteUser": "vscode",
+    "runArgs": [
+        "--env-file",
+        "${localWorkspaceFolder}/.devcontainer/devcontainer.env"
+    ],
+    "extensions": [
+        "esbenp.prettier-vscode",
+        // git
+        "eamodio.gitlens",
+        "michelemelluso.gitignore",
+        // ide
+        "Gruntfuggly.todo-tree",
+        "streetsidesoftware.code-spell-checker",
+        "oderwat.indent-rainbow",
+        "spmeesseman.vscode-taskexplorer",
+        // markdown
+        "yzhang.markdown-all-in-one",
+        "DavidAnson.vscode-markdownlint",
+        "shd101wyy.markdown-preview-enhanced",
+        "hnw.vscode-auto-open-markdown-preview",
+        // powershell
+        "ms-vscode.powershell",
+        // python
+        "almenon.arepl",
+        "ms-python.python",
+        "njqdev.vscode-python-typehint",
+        "ms-python.vscode-pylance",
+        "njpwerner.autodocstring",
+        "aaron-bond.better-comments",
+        "LittleFoxTeam.vscode-python-test-adapter",
+        // toml
+        "bungcip.better-toml",
+        // yaml
+        "redhat.vscode-yaml"
+    ],
+    "mounts": [
+        // for cached extensions
+        "source=cached-extensions,target=/home/vscode/.vscode-server/extensions,type=volume",
+    ],
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:/home/vscode/bin",
+        "PYTHONPATH": "src:.examples/python"
+    },
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "pip3 install -r requirements.txt"
+}
