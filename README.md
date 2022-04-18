@@ -41,8 +41,11 @@ This is my personal, fully configured dev environment for python, powershell, sh
 
 ### Terminals
 
+Bash
 ![Bash Terminal](docs/img/terminal_bash.png)
+ZSH
 ![ZSH Terminal](docs/img/terminal_zsh.png)
+PWSH
 ![PWSH Terminal](docs/img/terminal_pwsh.png)
 
 ### Explorer
