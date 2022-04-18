@@ -69,5 +69,6 @@ Update the values in .devcontainer/devcontainer.env to set your time zone, desir
 
 ## Issues
 
+* This environment has only been validated on a mac. It will not work on other operating systems like Windows until I get around to making it compatible.
 * If your terminal fonts look weird and or you see a popup stating `The terminal only Supports monospace fonts`, run `.devcontainer/host_install.sh` (from your host system, not from within vs code) and then restart vs code to install the required font and properly display terminal prompts (currently OSX only)
 * Naming a source code subfolder "py" will break test discovery. This seems to be a [known issue](https://github.com/microsoft/vscode-python/issues/17414.)
