@@ -59,3 +59,7 @@ This setup utilizes a [dev container](https://code.visualstudio.com/docs/remote/
 3. Install [Docker Desktop](https://docs.docker.com/get-docker/) and configure its settings to start at login
 4. Run `.devcontainer/host_install.sh` to install the font required to properly display terminal prompts (currently OSX only)
 5. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder.
+
+## Configuration
+
+Update the values in .devcontainer/devcontainer.env to set your time zone, desired PowerShell version, etc.
