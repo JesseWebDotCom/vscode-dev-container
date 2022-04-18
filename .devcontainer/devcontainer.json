@@ -19,25 +19,19 @@
             "JavaScript Debug Terminal": null, // remove this terminal if present
             "bash": {
                 "path": "bash",
-                "args": [
-                    "-l"
-                ],
+                "args": ["-l"],
                 "icon": "terminal-bash"
             },
             "zsh": {
                 "path": "zsh",
-                "args": [
-                    "-l"
-                ]
+                "args": ["-l"]
             },
             "pwsh": {
                 "path": "pwsh",
                 "icon": "terminal-powershell",
-                "args": [
-                    "-NoLogo"
-                ]
+                "args": ["-NoLogo"]
             }
-        },
+        }
     },
     "remoteUser": "vscode",
     "runArgs": [
@@ -45,6 +39,7 @@
         "${localWorkspaceFolder}/.devcontainer/devcontainer.env"
     ],
     "extensions": [
+        "formulahendry.code-runner",
         "esbenp.prettier-vscode",
         // git
         "eamodio.gitlens",
@@ -76,7 +71,7 @@
     ],
     "mounts": [
         // for cached extensions
-        "source=cached-extensions,target=/home/vscode/.vscode-server/extensions,type=volume",
+        "source=cached-extensions,target=/home/vscode/.vscode-server/extensions,type=volume"
     ],
     "remoteEnv": {
         "PATH": "${containerEnv:PATH}:/home/vscode/bin",
