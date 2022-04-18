@@ -60,9 +60,14 @@ This setup utilizes a [dev container](https://code.visualstudio.com/docs/remote/
 1. Install [VS Code](https://code.visualstudio.com/download) and install the [Remote-Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 2. Clone this repo
 3. Install [Docker Desktop](https://docs.docker.com/get-docker/) and configure its settings to start at login
-4. Run `.devcontainer/host_install.sh` to install the font required to properly display terminal prompts (currently OSX only)
+4. Run `.devcontainer/host_install.sh` (from your host system, not from within vs code) and then restart vs code to install the required font and properly display terminal prompts (currently OSX only)
 5. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder.
 
 ## Configuration
 
 Update the values in .devcontainer/devcontainer.env to set your time zone, desired PowerShell version, etc.
+
+## Issues
+
+* If your terminal fonts look weird and or you see a popup stating `The terminal only Supports monospace fonts`, run `.devcontainer/host_install.sh` (from your host system, not from within vs code) and then restart vs code to install the required font and properly display terminal prompts (currently OSX only)
+* Naming a source code subfolder "py" will break test discovery. This seems to be a [known issue](https://github.com/microsoft/vscode-python/issues/17414.)
