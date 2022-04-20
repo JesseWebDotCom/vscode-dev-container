@@ -67,6 +67,10 @@
         "njpwerner.autodocstring",
         "aaron-bond.better-comments",
         "LittleFoxTeam.vscode-python-test-adapter",
+        // shell
+        "rogalmic.bash-debug",
+        "timonwong.shellcheck",
+        "mads-hartmann.bash-ide-vscode",
         // toml
         "bungcip.better-toml",
         // yaml

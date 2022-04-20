@@ -29,6 +29,7 @@ apt update && apt install -yq \
     python3-dev \
     python3-pip \
     software-properties-common \
+    shellcheck \
     tzdata \
     wget \
     zlib1g \

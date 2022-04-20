@@ -35,6 +35,13 @@
             "script": "${file}",
             "args": [],
             "cwd": "${file}"
+        },
+        {
+            "name": "Bash: Current File (Integrated Terminal)",
+            "type": "bashdb",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
         }
     ]
 }
