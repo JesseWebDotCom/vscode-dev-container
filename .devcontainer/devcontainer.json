@@ -5,6 +5,9 @@
     },
     // Set *default* container specific settings.json values on container create.
     "settings": {
+        // git
+        "git.autofetch": true,
+
         "terminal.integrated.cursorBlinking": true,
         "powershell.codeFormatting.autoCorrectAliases": true,
         "powershell.integratedConsole.showOnStartup": false,

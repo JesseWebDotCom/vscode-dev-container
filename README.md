@@ -30,6 +30,10 @@ This is my personal, fully configured dev environment for python, powershell, sh
 * -NoLogo PowerShell terminal
 * More
 
+## Tools
+
+Misc helper scripts (ex. delete all docker containers/images)
+
 ## Screenshots
 
 ### Python
