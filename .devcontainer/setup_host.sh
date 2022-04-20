@@ -1,6 +1,8 @@
 #!/bin/bash
-# run this script on the OSX system running vs code & docker desktop
+# run this script on the OSX system running vscode & docker desktop
+PROJECT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && cd .. && pwd)
 
+# install fonts
 font_dir="$HOME/Library/Fonts"
 
 # download and install the terminal font
@@ -15,3 +17,10 @@ unzip -o /$HOME/fira.zip -d "/$HOME/fira"
 cp /$HOME/fira/ttf/* "$font_dir"
 rm -f /$HOME/fira.zip
 rm -rf "/$HOME/fira"
+
+# create custonization files if not present (these are for your customziation and are intentionally gitignored)
+mkdir -p $PROJECT_DIR/.devcontainer/customize
+touch $PROJECT_DIR/.devcontainer/customize/requirements.txt
+touch $PROJECT_DIR/.devcontainer/customize/constraints.txt
+touch $PROJECT_DIR/.devcontainer/customize/setup_container.sh
+touch $PROJECT_DIR/.devcontainer/customize/variables.env

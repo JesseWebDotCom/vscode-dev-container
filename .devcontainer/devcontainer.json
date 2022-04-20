@@ -34,10 +34,10 @@
         }
     },
     "remoteUser": "vscode",
-    "runArgs": [
-        "--env-file",
-        "${localWorkspaceFolder}/.devcontainer/devcontainer.env"
-    ],
+    // "runArgs": [
+    //     "--env-file",
+    //     "${localWorkspaceFolder}/.devcontainer/devcontainer.env"
+    // ],
     "extensions": [
         "formulahendry.code-runner",
         "esbenp.prettier-vscode",
@@ -75,7 +75,8 @@
     ],
     "remoteEnv": {
         "PATH": "${containerEnv:PATH}:/home/vscode/bin"
-    },
-    // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "pip3 install -r requirements.txt -c constraints.txt"
+    }
+    // },
+    // // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "pip3 install -r requirements.txt -c constraints.txt"
 }

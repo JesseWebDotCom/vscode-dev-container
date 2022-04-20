@@ -1,14 +1,16 @@
 #!/bin/bash
 
-# setup environment variables from file
-eval $(grep -v -e '^#' /tmp/container_install/devcontainer.env | xargs -I {} echo export \'{}\')
+# create 1 merged environment variable file, with entries in custom_devccontainer taking priority
+sort -u -t '=' -k 1,1 /tmp/.devcontainer/customize/variables.env /tmp/.devcontainer/build/variables.env | grep -v '^$\|^\s*\#' > /tmp/.devcontainer/variables.env
+# create environment variables from merged file
+eval $(grep -v -e '^#' /tmp/.devcontainer/variables.env | xargs -I {} echo export \'{}\')
 
 # add the user
 useradd -m $USERNAME
 
 # install dependencies, clean up, and set locale
 export DEBIAN_FRONTEND=noninteractive
-apt-get update && apt-get install -yq \
+apt update && apt install -yq \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -31,7 +33,7 @@ apt-get update && apt-get install -yq \
     wget \
     zlib1g \
     zsh \
-    && apt-get dist-upgrade -y \
+    && apt full-upgrade -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && locale-gen $LANG && update-locale
@@ -47,10 +49,10 @@ wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-pr
 dpkg -i packages-microsoft-prod.deb
 # Update the list of packages after we added packages.microsoft.com
 # sudo apt-get update
-apt-get update
+apt update
 # Install PowerShell
 # sudo apt-get install -y powershell
-apt-get install -y powershell
+apt install -y powershell
 
 # install powershell modules
 pwsh -Command Install-Module posh-git -Scope AllUsers -Force
@@ -72,8 +74,8 @@ chmod +x /home/${USERNAME}/bin/fzf
 
 # enable posh for each shell with desired time zone
 mkdir -p /home/${USERNAME}/.config/powershell
-cp /tmp/container_install/Microsoft.PowerShell_profile.ps1 /home/${USERNAME}/.config/powershell/Microsoft.PowerShell_profile.ps1
-cp /tmp/container_install/Microsoft.PowerShell_profile.ps1 /home/${USERNAME}/.config/powershell/Microsoft.VSCode_profile.ps1
+cp /tmp/.devcontainer/build/Microsoft.PowerShell_profile.ps1 /home/${USERNAME}/.config/powershell/Microsoft.PowerShell_profile.ps1
+cp /tmp/.devcontainer/build/Microsoft.PowerShell_profile.ps1 /home/${USERNAME}/.config/powershell/Microsoft.VSCode_profile.ps1
 
 echo "eval \"\$(oh-my-posh init bash --config /home/${USERNAME}/$POSH_THEME.omp.json)\"" > /home/${USERNAME}/.bashrc && \
     echo "eval \"\$(oh-my-posh init zsh --config /home/${USERNAME}/$POSH_THEME.omp.json)\"" > /home/${USERNAME}/.zshrc
