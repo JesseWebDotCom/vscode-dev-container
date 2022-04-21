@@ -5,7 +5,7 @@
         "powershell": "/usr/bin/pwsh",
         "python": "/usr/bin/python3"
     },
-    "code-runner.runInTerminal": false,
+    "code-runner.runInTerminal": true,
     "code-runner.clearPreviousOutput": true,
     // powershell
     "powershell.buttons.showRunButtons": false,
