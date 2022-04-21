@@ -3,6 +3,8 @@
 
 This is my personal, fully configured dev environment for python, powershell, shell coding and more (Markdown, YAML, TOML, etc). Its optimized to ease development and provide beautiful code (replacing other IDE's like Pycharm, Windows PowerShell ISE, etc).
 
+FYI - Using this dev container for Python developemnt and code execution is 10x faster than PyCharm Community Edition.
+
 ## Language Enhancements
 <!-- markdownlint-disable MD033 -->
 <table><tr><td>Language</td><td>Enhancements</td></tr>
