@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Tools: Make Executable",
+            "type": "shell",
+            "command": "${workspaceFolder}/tools/tools_make_executable.sh",
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/tools"
+            }
+        }
+    ]
+}
