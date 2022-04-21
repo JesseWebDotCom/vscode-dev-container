@@ -2,7 +2,8 @@
 # checks if docker is installed
 
 # imports
-. common/logger.sh
+SCRIPT_DIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+source "$SCRIPT_DIR/common/logger.sh"
 
 # main
 if ! which docker; then
