@@ -8,8 +8,8 @@ This is my personal, fully configured dev environment for python, powershell, sh
 <table><tr><td>Language</td><td>Enhancements</td></tr>
 <tr><td>Markdown</td><td><ul><li>Auto-Preview</li><li>Formatting (markdownlint)</li><li>Linting (markdownlint)</li><li>More...</li></ul></td></tr>
 <tr><td>Python</td><td><ul><li>Auto-REPL</li><li>Documenting (autoDocstring)</li><li>Execution (code runner)</li><li>Formatting (black, autopep8, yapf)</li><li>Intellisense (pylance, type hints)</li><li>Linting (mypy, bandit, flake8, pylint, pycodestyle)</li><li>Testing (pytest)</li><li>More...</li></ul></td></tr>
-<tr><td>PowerShell</td><td><ul><li>Execution (code runner)</li><li>Formatting (powershell)</li><li>Intellisense (powershell)</li><li>Linting (psscriptanalyzer)</<tr><td>Shell</td><td><ul><li>Debugging (bash debug)</li><li>Intellisense (bash ide)</li><li>Linting (shell-check)</li><li>More...</li></ul></td></tr>
-li><li>Testing (tbd)</li><li>More...</li></ul></td></tr>
+<tr><td>PowerShell</td><td><ul><li>Execution (code runner)</li><li>Formatting (powershell)</li><li>Intellisense (powershell)</li><li>Linting (psscriptanalyzer)</td></tr>
+<tr><td>Shell</td><td><ul><li>Debugging (bash debug)</li><li>Intellisense (bash ide)</li><li>Linting (shell-check)</li><li>Testing (tbd)</li><li>More...</li></ul></td></tr>
 <tr><td>TOML</td><td><ul><li>Formatting (prettier toml)</li><li>Linting (better toml)</li><li>More...</li></ul></td></tr>
 <tr><td>YAML</td><td><ul><li>Formatting (red hat)</li><li>Linting (red hat)</li><li>More...</li></ul></td></tr>
 <tr><td>Other</td><td><ul><li>Formatting (prettier)</li><li>More...</li></ul></td></tr>
@@ -31,9 +31,11 @@ li><li>Testing (tbd)</li><li>More...</li></ul></td></tr>
 * -NoLogo PowerShell terminal
 * More
 
-## Tools
+## Tools & Tasks
 
-Misc helper scripts (ex. delete all docker containers/images)
+* Misc helper scripts (ex. delete all docker containers/images)
+* Key tools are accessible directly through vs code tasks
+* Standardized, formatted, color output logging
 
 ## Screenshots
 
@@ -86,7 +88,7 @@ This setup utilizes a [dev container](https://code.visualstudio.com/docs/remote/
 1. Install [VS Code](https://code.visualstudio.com/download) and install the [Remote-Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 2. Clone this repo and create/configure the [customziation files](#customizations) as needed (they can be blank but must be present)
 3. Install [Docker Desktop](https://docs.docker.com/get-docker/) and configure its settings to start at login
-4. Run `.devcontainer/host_install.sh` (from your host system, not from within vs code) and then restart vs code to install the required font and properly display terminal prompts (currently OSX only)
+4. Run `tools/host_setup.sh` (from your host system, not from within vs code) and then restart vs code to install the required font and properly display terminal prompts (currently OSX only)
 5. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder.
 
 ## Issues
