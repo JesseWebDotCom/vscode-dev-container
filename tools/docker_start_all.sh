@@ -1,28 +1,13 @@
 #!/bin/bash
-#==============================================================================
-#title           :docker_start_all.sh
-#description     :This script starts all containers in a docker environmemt
-#author		 :jessewebdotcom
-#date            :n/a
-#version         :n/a
-#usage		 :./docker_start_all.sh
-#notes           :Requires docker + compose
-#bash_version    :n/a
-#==============================================================================
+# starts all containers in a docker environmemt
 
-red='\e[1;31m%s\e[0m\n'
-green='\e[1;32m%s\e[0m\n'
-yellow='\e[1;33m%s\e[0m\n'
-blue='\e[1;34m%s\e[0m\n'
-magenta='\e[1;35m%s\e[0m\n'
-cyan='\e[1;36m%s\e[0m\n'
+# imports
+. common/logger.sh
 
-printf "\n$cyan"    "[START ALL] Starting..."
+# main
+. docker_check.sh
 
-echo "[START ALL] Starting all containers..."
-docker start $(docker ps -aq)
+out_console "Starting all contaniers..."
+docker start "$(docker ps -aq)"
 
-printf "$green\n"    "[START ALL] Done"
-
-
-
+out_console "Finished - Elapsed Time: $SECONDS second(s)"
