@@ -221,3 +221,6 @@ cython_debug/
 
 # ignore customizations
 .devcontainer/customize
+
+# junk files from code runner
+**/tempCodeRunnerFile.sh
