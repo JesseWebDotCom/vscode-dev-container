@@ -30,7 +30,7 @@ out_console () {
     if [ "$level" = "ERROR" ]; then
         level="[ERROR]"
         color=$color_bold$color_red
-        prefix="[${BASH_SOURCE[1]}:${FUNCNAME[0]}] "
+        # prefix="[${BASH_SOURCE[1]}:${FUNCNAME[0]}] "
     elif [ "$level" = "WARN" ]; then
         level="[WARN] "
         color=$color_yellow
