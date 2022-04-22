@@ -7,6 +7,7 @@
     "settings": {
         // git
         "git.autofetch": true,
+        "remote.containers.copyGitConfig": true,
 
         "terminal.integrated.cursorBlinking": true,
         "powershell.codeFormatting.autoCorrectAliases": true,
@@ -83,7 +84,4 @@
     "remoteEnv": {
         "PATH": "${containerEnv:PATH}:/home/vscode/bin"
     }
-    // },
-    // // Use 'postCreateCommand' to run commands after the container is created.
-    // "postCreateCommand": "pip3 install -r requirements.txt -c constraints.txt"
 }
