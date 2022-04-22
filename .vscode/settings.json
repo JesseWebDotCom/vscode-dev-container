@@ -63,6 +63,7 @@
     // testing
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": ["--ignore=${workspaceFolder}/templates"], // only look for pytests here
     // enables pylance (not python) to find modules
     "python.analysis.extraPaths": ["src/proj", "src/lib/python"],
     "python.testing.autoTestDiscoverOnSaveEnabled": true,
@@ -72,6 +73,7 @@
     "python.formatting.blackArgs": ["--line-length", "120"],
     // linting
     "python.linting.enabled": true,
+    "python.linting.ignorePatterns": ["templates/**/*.py"],
     "python.linting.lintOnSave": true,
     "python.linting.banditEnabled": true,
     "python.linting.banditPath": "/usr/local/bin/bandit",
