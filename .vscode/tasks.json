@@ -13,6 +13,41 @@
             "options": {
                 "cwd": "${workspaceFolder}/tools"
             }
+        },
+        {
+            "label": "Projects: Create",
+            "type": "shell",
+            "command": "/usr/bin/python3",
+            "args": [
+                "tools/project_create.py",
+                "-t",
+                "${input:project_create_template}",
+                "-n",
+                "${input:project_create_name}",
+                "-d",
+                "${input:project_create_description}"
+            ],
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "project_create_template",
+            "type": "promptString",
+            "description": "Name of an existing template",
+            "default": "python_project"
+        },
+        {
+            "id": "project_create_name",
+            "type": "promptString",
+            "description": "Name of the new project"
+            // "default": "my_python_project"
+        },
+        {
+            "id": "project_create_description",
+            "type": "promptString",
+            "description": "Description for the new project"
+            // "default": "This is my new python project"
         }
     ]
 }
