@@ -1,9 +1,15 @@
 
 # vscode-dev-container
 
-Supercharge your Visual Studio Code to develop faster, easier, and more enjoyable in any language. And say goodbye to other IDE's like Pycharm, Windows PowerShell ISE, etc.
+Supercharge your Visual Studio Code to code faster, easier, and more enjoyably in any language (Python, Powershell, Shell, Markdown, YAML, TOML, and more) in this fully pre-configured, customized, optimized, and isolated dev environment. Say goodbye to other IDE's like Pycharm, Windows PowerShell ISE, etc.
 
-FYI - This is my environment for personal development.
+With the code from this repo, your Visual Studio Code will be fully configured and optimized with multi-language support and enhancements using a preconfigured dev container. No more wasting time finding and installing extensions, configuring settings, etc.
+
+Additionally installed are a collection of custom tools designed to simplify and speed up development and administration (ex. creating projects from predefined templates).
+
+Finally, all your project dependencies will live and run in the dev container, isolated from your host system (similar but more powerful than Python virtual environments); keeping your host system clean and allowing you to easily and quickly port your dev environment to another system when needed.
+
+Installation, customization, and usage is a snap.
 
 ## Highlights
 <!-- markdownlint-disable MD033 -->
