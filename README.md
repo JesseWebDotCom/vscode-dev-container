@@ -13,7 +13,7 @@ Installation, customization, and usage is a snap.
 
 ## Highlights
 
-While this containe is packed with ton of great features, here are just some of the highlights.
+While this container is packed with ton of great features, here are just some of the highlights.
 
 <!-- markdownlint-disable MD033 -->
 <table><tr><td>Language</td><td>Highlights</td></tr>
