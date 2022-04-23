@@ -1,13 +1,14 @@
 
 # vscode-dev-container
 
-This is my personal, fully configured dev environment for python, powershell, shell coding and more (Markdown, YAML, TOML, etc). Its optimized to ease development and provide beautiful code (replacing other IDE's like Pycharm, Windows PowerShell ISE, etc).
+This is my personal, fully configured dev environment for python, powershell, shell coding and more (Markdown, YAML, TOML, etc). Its optimized to ease development and create beautiful code (replacing all other IDE's like Pycharm, Windows PowerShell ISE, etc).
 
 FYI - Using this dev container for Python development and code execution is 10x faster than PyCharm Community Edition.
 
-## Language Enhancements
+## Highlights
 <!-- markdownlint-disable MD033 -->
 <table><tr><td>Language</td><td>Enhancements</td></tr>
+<tr><td>All</td><td><ul><li>[Create projects from templates](#create-a-project-from-a-template)</li><li>Customizable Run button across all executable file types</li><li>Terminal theming through [oh-my-posh](https://ohmyposh.dev)</li><li>Quick action helpers (ex. create project from template) available via VS Code Tasks or terminal</li><li>IDE enhancements like better fonts, icons for file/folder, task explorer, TODO tree, etc.</li><li>More...</li></ul></td></tr>
 <tr><td>Markdown</td><td><ul><li>Auto-Preview</li><li>Formatting (markdownlint)</li><li>Linting (markdownlint)</li><li>More...</li></ul></td></tr>
 <tr><td>Python</td><td><ul><li>Auto-REPL</li><li>Documenting (autoDocstring)</li><li>Execution (code runner)</li><li>Formatting (black, autopep8, yapf)</li><li>Intellisense (pylance, type hints)</li><li>Linting (mypy, bandit, flake8, pylint, pycodestyle)</li><li>Testing (pytest)</li><li>More...</li></ul></td></tr>
 <tr><td>PowerShell</td><td><ul><li>Execution (code runner)</li><li>Formatting (powershell)</li><li>Intellisense (powershell)</li><li>Linting (psscriptanalyzer)</td></tr>
@@ -17,38 +18,7 @@ FYI - Using this dev container for Python development and code execution is 10x 
 <tr><td>Other</td><td><ul><li>Formatting (prettier)</li><li>More...</li></ul></td></tr>
 </table>
 
-## IDE Enhancements
-
-* Standard and customizable Run button across all executable file types
-* TODOs tree
-* Task explorer
-* Icons for files/folders in explorer view
-* More
-
-## Terminal Enhancements
-
-* Defaults to bash
-* Support for bash, pwsh, and zsh
-* Standard prompt and theming through [oh-my-posh](https://ohmyposh.dev)
-* -NoLogo PowerShell terminal
-* More
-
-## Tools & Tasks
-
-* **Create projects from templates** - tools/project_create.py
-* Misc helper scripts (ex. delete all docker containers/images)
-* Key tools are accessible directly through vs code tasks
-* Standardized, formatted, color output logging
-
 ## Screenshots
-
-### Python
-
-![AREPL](docs/img/python_arepl.gif)
-
-### Linting
-
-![Linting](docs/img/linting.png)
 
 ### Terminals
 
@@ -59,10 +29,9 @@ ZSH
 PWSH
 ![PWSH Terminal](docs/img/terminal_pwsh.png)
 
-### Explorer
+### Linting
 
-![Explorer Icons](docs/img/explorer_icons.png)
-![Task Explorer](docs/img/explorer_tasks.png)
+![Linting](docs/img/linting.png)
 
 ## Configuration
 
