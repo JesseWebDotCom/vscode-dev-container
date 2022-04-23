@@ -12,6 +12,9 @@ Finally, all your project dependencies will live and run in the dev container, i
 Installation, customization, and usage is a snap.
 
 ## Highlights
+
+While this containe is packed with ton of great features, here are just some of the highlights.
+
 <!-- markdownlint-disable MD033 -->
 <table><tr><td>Language</td><td>Highlights</td></tr>
 <tr><td>All</td><td><ul><li><a href="#configuration">Easily configure</a> container time zone, terminal themes, additional packages, etc.<li><a href="#create-a-project-from-a-template">Create projects from configurable templates</a></li><li>Standardize Run button across all executable file types</li><li>Terminal theming through <a href="https://ohmyposh.dev" target="_blank">oh-my-posh</a></li><li>Quick action helpers (ex. create project from template) available via VS Code Tasks or terminal</li><li>IDE enhancements like better fonts, icons for file/folder, task explorer, TODO tree, etc.</li><li>More...</li></ul></td></tr>
