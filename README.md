@@ -1,9 +1,9 @@
 
 # vscode-dev-container
 
-This is my personal, fully configured dev environment for python, powershell, shell coding and more (Markdown, YAML, TOML, etc). Its optimized to ease development and create beautiful code (replacing all other IDE's like Pycharm, Windows PowerShell ISE, etc).
+Supercharge your Visual Studio Code to develop faster, easier, and more enjoyable in any language. And say goodbye to other IDE's like Pycharm, Windows PowerShell ISE, etc.
 
-FYI - Using this dev container for Python development and code execution is 10x faster than PyCharm Community Edition.
+FYI - This is my environment for personal development.
 
 ## Highlights
 <!-- markdownlint-disable MD033 -->
@@ -60,10 +60,11 @@ These files allow you to customize the container with customizations like settin
 This setup utilizes a [dev container](https://code.visualstudio.com/docs/remote/containers) to configure the entire environment. So, we simply need VS Code, Docker Desktop, and the code from this repo.
 
 1. Install [VS Code](https://code.visualstudio.com/download) and install the [Remote-Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-2. Clone this repo and create/configure the [customziation files](#customizations) as needed (they can be blank but must be present)
-3. Install [Docker Desktop](https://docs.docker.com/get-docker/) and configure its settings to start at login
-4. Run `tools/host_setup.sh` (from your host system, not from within vs code) and then restart vs code to install the required font and properly display terminal prompts (currently OSX only)
-5. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder.
+2. Install [Docker Desktop](https://docs.docker.com/get-docker/) and configure its settings to start at login
+3. Clone this repo
+4. Run `tools/host_setup.sh` (from your host system, not from within vs code - this is to install the required fonts and create the customization files)
+5. Configure the [customziation files](#customizations) as needed (they can be blank but must be present)
+6. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder.
 
 ## HOWTO
 
