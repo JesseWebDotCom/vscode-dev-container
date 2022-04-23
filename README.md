@@ -35,6 +35,7 @@ FYI - Using this dev container for Python development and code execution is 10x 
 
 ## Tools & Tasks
 
+* **Create projects from templates** - tools/project_create.py
 * Misc helper scripts (ex. delete all docker containers/images)
 * Key tools are accessible directly through vs code tasks
 * Standardized, formatted, color output logging
@@ -78,10 +79,12 @@ These files contain the core configurations for the container and should not be 
 
 These files allow you to customize the container with customizations like setting your desired time zone, terminal theme, container & python package installs, etc. You may leave them blank if you do not have any customizations but they need to be present to prevent the container build from failing.
 
-* .devcontainer/customize/setup_container.sh - add custom commands needed for your project (ex. install packages). These commands will be run after container_install.sh is run.
+* .devcontainer/customize/setup_container.sh - add custom commands needed for your project (ex. install packages). These commands will be run after .devcontainer/build/setup_container.sh is run.
+  * TIP: Call tools/project_create.py (with the desired parameters) to auto create your project structure
+  * TIP: For python projects, call to install your requirements and constraints (ex. pip3 install -r requirements.txt -c constraints.txt)
+}
+
 * .devcontainer/customize/variables.env - set your time zone, desired PowerShell version, etc. The variables here will be merged with and override variables found in the devcontainer.json.
-* requirements.txt - add any python packages to be pip installed at the end of the build.
-* constraints.txt - add any python package constraints you have
 
 ## Installation
 
@@ -92,6 +95,19 @@ This setup utilizes a [dev container](https://code.visualstudio.com/docs/remote/
 3. Install [Docker Desktop](https://docs.docker.com/get-docker/) and configure its settings to start at login
 4. Run `tools/host_setup.sh` (from your host system, not from within vs code) and then restart vs code to install the required font and properly display terminal prompts (currently OSX only)
 5. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder.
+
+## HOWTO
+
+### Create a project from a template
+
+When creating new projects, you typically end up manually creating the same folders (ex. src/proj/your_project)
+and files (ex. readme.md, requirements.txt, src/proj/your_project/**init**.py, etc.). You also have to manually
+add the same data to some of the project files (ex. project name at the top of the readme.md).
+
+Instead, you can automatically create a new project with a template:
+
+1. Find or create your desired template in /templates (see included ones for examples)
+2. Run `tools/project_create.py` (with the desired parameters) OR run the VS Code task `Projects: Create`
 
 ## Issues
 
