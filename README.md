@@ -42,6 +42,17 @@ PWSH
 
 ![Linting](docs/img/linting.png)
 
+## Installation
+
+This setup utilizes a [dev container](https://code.visualstudio.com/docs/remote/containers) to configure the entire environment. So, we simply need VS Code, Docker Desktop, and the code from this repo.
+
+1. Install [VS Code](https://code.visualstudio.com/download) and install the [Remote-Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+2. Install [Docker Desktop](https://docs.docker.com/get-docker/) and configure its settings to start at login
+3. Clone this repo
+4. Run `tools/host_setup.sh` (from your host system, not from within vs code - this is to install the required fonts and create the customization files)
+5. Configure the [customziation files](#customizations) as needed (they can be blank but must be present)
+6. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder.
+
 ## Configuration
 
 While this environment and settings work for me, they may not be ideal for everyone. For example, you may need to set a different time zone, use a different terminal theme, or install some additional packages into the container. While you could directly modify the default install script and environment file that controls these things, those files would then be out of sync with this repo (making it difficult for you to use updated versions as I post them). Instead, create and use customization files.
@@ -63,17 +74,6 @@ These files allow you to customize the container with customizations like settin
 }
 
 * .devcontainer/customize/variables.env - set your time zone, desired PowerShell version, etc. The variables here will be merged with and override variables found in the devcontainer.json.
-
-## Installation
-
-This setup utilizes a [dev container](https://code.visualstudio.com/docs/remote/containers) to configure the entire environment. So, we simply need VS Code, Docker Desktop, and the code from this repo.
-
-1. Install [VS Code](https://code.visualstudio.com/download) and install the [Remote-Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-2. Install [Docker Desktop](https://docs.docker.com/get-docker/) and configure its settings to start at login
-3. Clone this repo
-4. Run `tools/host_setup.sh` (from your host system, not from within vs code - this is to install the required fonts and create the customization files)
-5. Configure the [customziation files](#customizations) as needed (they can be blank but must be present)
-6. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder.
 
 ## HOWTO
 
