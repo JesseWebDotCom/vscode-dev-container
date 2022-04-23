@@ -68,6 +68,7 @@
         "njpwerner.autodocstring",
         "aaron-bond.better-comments",
         "LittleFoxTeam.vscode-python-test-adapter",
+        "frhtylcn.pythonsnippets",
         // shell
         "rogalmic.bash-debug",
         "timonwong.shellcheck",
