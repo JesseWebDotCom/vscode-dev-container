@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # create 1 merged environment variable file, with entries in custom_devccontainer taking priority
-sort -u -t '=' -k 1,1 /tmp/.devcontainer/customize/variables.env /tmp/.devcontainer/build/variables.env | grep -v '^$\|^\s*\#' > /tmp/.devcontainer/variables.env
+sort -u -t '=' -k 1,1 /tmp/.devcontainer/customize/variables.env /tmp/.devcontainer/build/variables.env | grep -v '^$\|^\s*\#' >/tmp/.devcontainer/variables.env
 # create environment variables from merged file
 eval "$(grep -v -e '^#' /tmp/.devcontainer/variables.env | xargs -I {} echo export \'{}\')"
 
@@ -33,11 +33,11 @@ apt update && apt install -yq \
     tzdata \
     wget \
     zlib1g \
-    zsh \
-    && apt full-upgrade -y \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && locale-gen "$LANG" && update-locale
+    zsh &&
+    apt full-upgrade -y &&
+    apt-get clean &&
+    rm -rf /var/lib/apt/lists/* &&
+    locale-gen "$LANG" && update-locale
 
 # install python packages
 pip install --upgrade black autopep8 yapf mypy bandit flake8 pylint pycodestyle pytest
@@ -62,11 +62,11 @@ pwsh -Command Install-Module PSFzf -Scope AllUsers -Force
 pwsh -Command Install-Module Terminal-Icons -Scope AllUsers -Force
 
 # Download the oh-my-posh binary & theme
-mkdir /home/"${USERNAME}"/bin; \
-    wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-"$(dpkg --print-architecture)" -O /home/"${USERNAME}"/bin/oh-my-posh; \
-    chmod +x /home/"${USERNAME}"/bin/oh-my-posh; \
-    chown "${USERNAME}": /home/"${USERNAME}"/bin; \
-    curl https://github.com/JanDeDobbeleer/oh-my-posh/raw/main/themes/"$POSH_THEME".omp.json -sLo /home/"${USERNAME}"/"$POSH_THEME".omp.json
+mkdir /home/"${USERNAME}"/bin
+wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-"$(dpkg --print-architecture)" -O /home/"${USERNAME}"/bin/oh-my-posh
+chmod +x /home/"${USERNAME}"/bin/oh-my-posh
+chown "${USERNAME}": /home/"${USERNAME}"/bin
+curl https://github.com/JanDeDobbeleer/oh-my-posh/raw/main/themes/"$POSH_THEME".omp.json -sLo /home/"${USERNAME}"/"$POSH_THEME".omp.json
 
 # Download the fzf binary
 mkdir -p /home/"${USERNAME}"/bin
@@ -79,14 +79,14 @@ cp /tmp/.devcontainer/build/Microsoft.PowerShell_profile.ps1 /home/"${USERNAME}"
 cp /tmp/.devcontainer/build/Microsoft.PowerShell_profile.ps1 /home/"${USERNAME}"/.config/powershell/Microsoft.VSCode_profile.ps1
 
 # shellcheck disable=SC2086
-echo "eval \"\$(oh-my-posh init bash --config /home/${USERNAME}/$POSH_THEME.omp.json)\"" > /home/${USERNAME}/.bashrc
+echo "eval \"\$(oh-my-posh init bash --config /home/${USERNAME}/$POSH_THEME.omp.json)\"" >/home/${USERNAME}/.bashrc
 # shellcheck disable=SC2086
-echo "eval \"\$(oh-my-posh init zsh --config /home/${USERNAME}/$POSH_THEME.omp.json)\"" > /home/${USERNAME}/.zshrc
+echo "eval \"\$(oh-my-posh init zsh --config /home/${USERNAME}/$POSH_THEME.omp.json)\"" >/home/${USERNAME}/.zshrc
 
 # cache extensions
-mkdir -p /home/"$USERNAME"/.vscode-server/extensions \
-    && chown -R "$USERNAME" \
-    /home/"$USERNAME"/.vscode-server
+mkdir -p /home/"$USERNAME"/.vscode-server/extensions &&
+    chown -R "$USERNAME" \
+        /home/"$USERNAME"/.vscode-server
 
 # change default shell to bash
 chsh -s /bin/bash "$USERNAME"

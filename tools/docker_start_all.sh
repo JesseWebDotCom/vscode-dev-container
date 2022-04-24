@@ -2,12 +2,16 @@
 # starts all containers in a docker environmemt
 
 # imports
-SCRIPT_DIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+SCRIPT_DIR="$(
+    cd -- "$(dirname "$0")" >/dev/null 2>&1 || exit
+    pwd -P
+)"
+# shellcheck disable=SC1091
 source "$SCRIPT_DIR/common/logger.sh"
+# shellcheck disable=SC1091
+source docker_check.sh
 
 # main
-. docker_check.sh
-
 out_console "Starting all contaniers..."
 docker start "$(docker ps -aq)"
 
