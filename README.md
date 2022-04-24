@@ -46,16 +46,19 @@ PWSH
 
 ### Prerequisites
 
-Install the following tools:
+Install the following tools (links to the tool downloads and installation walkthroughs if you need them below):
 
-* [Git] (<https://github.com/git-guides/install-git>)
-* [VS Code](https://code.visualstudio.com/download)
-* [Remote-Containers VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-* [Docker Desktop](https://docs.docker.com/get-docker/)
+|Tool | Walkthrough |
+|--|--|
+| [Git](https://git-scm.com/downloads) | [Windows / Mac](<https://github.com/git-guides/install-git>) |
+| [VS Code](https://code.visualstudio.com/download) | [Windows / Mac](https://www.toolsqa.com/blogs/install-visual-studio-code/)|
+| [Docker Desktop](https://docs.docker.com/get-docker/) | [Windows / Mac](https://code.visualstudio.com/docs/remote/containers-tutorial)|
+| [Remote-Containers VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) | [Windows / Mac](https://code.visualstudio.com/docs/remote/containers-tutorial) |
 
 ### Setup
 
 1. Open Docker Desktop and configure its settings to start at login
+   ![Docker - Start at Login](docs/img/docker_start_at_login.png)
 2. Clone this repo
 3. Run the host setup script:
     * Macintosh: `tools/host_setup_mac.sh`
