@@ -70,7 +70,13 @@ Install the following tools (links to the tool downloads and installation walkth
 ## Updating
 
 Simply download the latest files from this repo, add/overwite them in your project, and rebuild the container (i.e. open command pallette and run "Remote-Containers: Rebuild Container").
-Note: Ensure you do not overwrite existing files you may have altered (ex. .gitignore).
+
+---
+**NOTE**
+
+Ensure you do not overwrite existing files that you may have altered (ex. .gitignore, templates, etc.)
+
+---
 
 ## Configuration
 
@@ -94,7 +100,12 @@ These files allow you to customize the container with customizations like settin
 
 * .devcontainer/customize/variables.env - set your time zone, desired PowerShell version, etc. The variables here will be merged with and override variables found in the devcontainer.json.
 
-Note: Whenever you add/edit customizations, you also need to rebuild the container (i.e. open command pallette and run "Remote-Containers: Rebuild Container").
+---
+**NOTE**
+
+Whenever you add/edit customizations, you also need to rebuild the container (i.e. open command pallette and run "Remote-Containers: Rebuild Container").
+
+---
 
 ## HOWTO
 
