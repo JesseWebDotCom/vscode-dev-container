@@ -88,6 +88,10 @@
     "workbench.colorTheme": "Atom One Dark",
     // spelling
     "cSpell.diagnosticLevel": "Hint",
+    // shell
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
     // todos
     "todo-tree.highlights.enabled": false,
     "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,

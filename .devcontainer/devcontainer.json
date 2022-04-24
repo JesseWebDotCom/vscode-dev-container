@@ -73,6 +73,7 @@
         "rogalmic.bash-debug",
         "timonwong.shellcheck",
         "mads-hartmann.bash-ide-vscode",
+        "foxundermoon.shell-format",
         // toml
         "bungcip.better-toml",
         // yaml
