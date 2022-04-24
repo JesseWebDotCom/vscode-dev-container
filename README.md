@@ -7,7 +7,7 @@ With the code from this repo, your Visual Studio Code will be fully configured a
 
 Additionally installed are a collection of custom tools designed to simplify and speed up development and administration (ex. creating projects from predefined templates).
 
-Finally, all your project dependencies will live and run in the dev container, isolated from your host system (similar but more powerful than Python virtual environments); keeping your host system clean and allowing you to easily and quickly port your dev environment to another system when needed.
+Finally, all your project dependencies will live and run in a [dev container](https://code.visualstudio.com/docs/remote/containers), isolated from your host system (similar but more powerful than Python virtual environments); keeping your host system clean and allowing you to easily and quickly port your dev environment to another system when needed.
 
 Installation, customization, and usage is a snap.
 
@@ -44,14 +44,25 @@ PWSH
 
 ## Installation
 
-This setup utilizes a [dev container](https://code.visualstudio.com/docs/remote/containers) to configure the entire environment. So, we simply need VS Code, Docker Desktop, and the code from this repo.
+### Prerequisites
 
-1. Install [VS Code](https://code.visualstudio.com/download) and install the [Remote-Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-2. Install [Docker Desktop](https://docs.docker.com/get-docker/) and configure its settings to start at login
-3. Clone this repo
-4. Run `tools/host_setup.sh` (from your host system, not from within vs code - this is to install the required fonts and create the customization files)
-5. Configure the [customziation files](#customizations) as needed (they can be blank but must be present)
-6. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder.
+Install the following tools:
+
+* [Git] (<https://github.com/git-guides/install-git>)
+* [VS Code](https://code.visualstudio.com/download)
+* [Remote-Containers VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+* [Docker Desktop](https://docs.docker.com/get-docker/)
+
+### Setup
+
+1. Open Docker Desktop and configure its settings to start at login
+2. Clone this repo
+3. Run the host setup script:
+    * Macintosh: `tools/host_setup_mac.sh`
+    * Windows: `tools/host_setup_win.cmd`
+4. [optional] Configure the [customziation files](#customizations) as needed (they can be blank but must be present)
+5. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder. The container will start building (ignore any popups, ex. Cannot activate..., Reload window...)
+6. After the container builds (i.e. commands in the terminal window stop), restart VS Code.
 
 ## Configuration
 
@@ -93,3 +104,5 @@ Instead, you can automatically create a new project with a template:
 * This environment has only been validated on a mac. It will not work on other operating systems like Windows until I get around to making it compatible.
 * If your terminal fonts look weird and or you see a popup stating `The terminal only Supports monospace fonts`, run `tools/host_setup.sh` (from your host system, not from within vs code) and then restart vs code to install the required font and properly display terminal prompts (currently OSX only)
 * Naming a source code subfolder "py" will break test discovery. This seems to be a [known issue](https://github.com/microsoft/vscode-python/issues/17414.)
+* "\r': command not found" - If you see this on a Windows system this likely means a *.sh file contains a Windows line feed. Update the file to change Windows line feeds to Unix line feeds.
+* Stop (1333 ms): Check Docker is running - Start Docker Desktop

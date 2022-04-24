@@ -31,7 +31,7 @@ rm -f /$HOME/fira.zip
 rm -rf "/$HOME/fira"
 
 out_console "Verifying customizations..."
-# create custonization files if not present (these are for your customziation and are intentionally gitignored)
+# create customization files if not present (these are for your customziation and are intentionally gitignored)
 mkdir -p $PROJECT_DIR/.devcontainer/customize
 touch $PROJECT_DIR/.devcontainer/customize/setup_container.sh
 touch $PROJECT_DIR/.devcontainer/customize/variables.env
