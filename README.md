@@ -104,7 +104,6 @@ Instead, you can automatically create a new project with a template:
 
 ## Issues
 
-* This environment has only been validated on a mac. It will not work on other operating systems like Windows until I get around to making it compatible.
 * If your terminal fonts look weird and or you see a popup stating `The terminal only Supports monospace fonts`, run the [host setup script](#setup) for your OS and restart VS Code.
 * Naming a source code subfolder "py" will break test discovery. This seems to be a [known VS Code issue](https://github.com/microsoft/vscode-python/issues/17414.)
 * "\r': command not found" - If you see this on a Windows system this likely means a *.sh file contains a Windows line feed. Update the file to change Windows line feeds to Unix line feeds.
