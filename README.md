@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD036 -->
 
 # vscode-dev-container
 
@@ -15,7 +17,6 @@ Installation, customization, and usage is a snap.
 
 While this container is packed with ton of great features, here are just some of the highlights.
 
-<!-- markdownlint-disable MD033 -->
 <table><tr><td>Language</td><td>Highlights</td></tr>
 <tr><td>All</td><td><ul><li><a href="#configuration">Easily configure</a> container time zone, terminal themes, additional packages, etc.<li><a href="#create-a-project-from-a-template">Create projects from configurable templates</a></li><li>Standardize Run button across all executable file types</li><li>Terminal theming through <a href="https://ohmyposh.dev" target="_blank">oh-my-posh</a></li><li>Quick action helpers (ex. create project from template) available via VS Code Tasks or terminal</li><li>IDE enhancements like better fonts, icons for file/folder, task explorer, TODO tree, etc.</li><li>More...</li></ul></td></tr>
 <tr><td>Markdown</td><td><ul><li>Auto-Preview</li><li>Formatting (markdownlint)</li><li>Linting (markdownlint)</li><li>More...</li></ul></td></tr>
