@@ -67,9 +67,14 @@ Install the following tools (links to the tool downloads and installation walkth
 5. Start VS Code, run the Remote-Containers: Open Folder in Container... command from the Command Palette (F1) or quick actions Status bar item, and select the cloned repo folder. The container will start building (ignore any popups, ex. Cannot activate..., Reload window...)
 6. After the container builds (i.e. commands in the terminal window stop), restart VS Code.
 
+## Updating
+
+Simply download the latest files from this repo, add/overwite them in your project, and rebuild the container (i.e. open command pallette and run "Remote-Containers: Rebuild Container").
+Note: Ensure you do not overwrite existing files you may have altered (ex. .gitignore).
+
 ## Configuration
 
-While this environment and settings work for me, they may not be ideal for everyone. For example, you may need to set a different time zone, use a different terminal theme, or install some additional packages into the container. While you could directly modify the default install script and environment file that controls these things, those files would then be out of sync with this repo (making it difficult for you to use updated versions as I post them). Instead, create and use customization files.
+[optional] While this environment and settings work for me, they may not be ideal for everyone. For example, you may need to set a different container time zone, use a different terminal theme, or install some additional packages into the container. While you could directly modify the default install script and environment file that controls these things, those files would then be out of sync with this repo (making it difficult for you to use updated versions as I post them). Instead, create and use customization files.
 
 ### Defaults
 
@@ -88,6 +93,8 @@ These files allow you to customize the container with customizations like settin
 }
 
 * .devcontainer/customize/variables.env - set your time zone, desired PowerShell version, etc. The variables here will be merged with and override variables found in the devcontainer.json.
+
+Note: Whenever you add/edit customizations, you also need to rebuild the container (i.e. open command pallette and run "Remote-Containers: Rebuild Container").
 
 ## HOWTO
 
