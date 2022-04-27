@@ -83,6 +83,8 @@
     "python.linting.flake8Enabled": true,
     "python.linting.pycodestyleEnabled": true,
     "python.analysis.typeCheckingMode": "basic",
+    // markdown
+    "markdown.extension.preview.autoShowPreviewToSide": true,
     // visual
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Atom One Dark",
@@ -98,6 +100,7 @@
     "todo-tree.general.statusBar": "current file",
     "todo-tree.general.statusBarClickBehaviour": "reveal",
     // indent-rainbow
+    // https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.lightIndicatorStyleLineWidth": 2,
     // workspace
