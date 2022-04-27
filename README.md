@@ -28,6 +28,8 @@ While this container is packed with ton of great features, here are just some of
 <tr><td>Other</td><td><ul><li>Formatting (prettier)</li><li>More...</li></ul></td></tr>
 </table>
 
+Check out the [Extensions](docs/extensions.md) page for a full listing of every extension included.
+
 ## Screenshots
 
 ### Terminals
