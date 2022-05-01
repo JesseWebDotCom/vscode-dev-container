@@ -49,6 +49,7 @@
         "eamodio.gitlens",
         "michelemelluso.gitignore",
         // ide
+        "usernamehw.errorlens",
         "Gruntfuggly.todo-tree",
         "streetsidesoftware.code-spell-checker",
         "oderwat.indent-rainbow",
